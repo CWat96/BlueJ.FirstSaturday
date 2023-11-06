@@ -111,6 +111,13 @@ public class WriteLoops {
 
     public int helloZipCode() {
         int w = 0;
+        for (int i = 5; i <= 105; i++) {
+            if (i > 51) {
+                System.out.println("Hello Zipcode");
+            }else{
+                w = w + 1;
+            }
+        }
 
         // Write a FOR loop that counts from 5 to 105. Put an IF
         // statement inside the loop that checks the
@@ -118,7 +125,7 @@ public class WriteLoops {
         // prints “Hello Zipcode” instead of the statement w = w + 1;
 
                 // calling
-                w = w + 1;
+//                w = w + 1;
             // each time through the inner loop
         
         return w;
