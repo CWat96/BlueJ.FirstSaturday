@@ -27,10 +27,12 @@ public class WriteLoops {
 
     public int oneToTen() {
         int w = 0;
+        for (int i = 0; i < 10; i++) {
+            w = w + 1;
+        }
 
         // Write a FOR loop that counts from 1 to 10.
-        // calling
-        w = w + 1;
+        // calling w = w + 1;
         // each time through the loop
         
         return w;
