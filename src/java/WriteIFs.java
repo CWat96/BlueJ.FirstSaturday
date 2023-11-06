@@ -42,6 +42,9 @@ public class WriteIFs
     }
 
     public void checkFuel(double fuelLevel) {
+        if (fuelLevel < 0.08) {
+            refuel();
+        }
         // Write an IF statement that checks “fuelLevel” 
         // and if that check is less than 0.08, calls “refuel()”
 
