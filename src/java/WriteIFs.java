@@ -30,6 +30,9 @@ public class WriteIFs
     }
 
     public void fireplaceControl(Object fireplace1) {
+        if (outsideTemp() < 50 && insideTemp() < 62) {
+            startAFire(fireplace1);
+        }
         // Write an IF statement that checks 
         // “outsideTemp()” is less than 50 
         // AND 
