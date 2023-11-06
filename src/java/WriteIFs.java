@@ -18,16 +18,15 @@ public class WriteIFs
     }
     
     public String thermoSTAT(int room) {
-        if (62 < 70) {
-            System.out.println("heating");
+        if (room < 70) {
+            return "heating";
+        }else{
+            return "cooling";
         }
         // Write an IF statement that checks the 
         // “temperature(room)” and if that check is less than 70, 
         // calls “heatOn()” else calls “coolOn()”
 
-
-        
-        return this.ss;
     }
 
     public void fireplaceControl(Object fireplace1) {
