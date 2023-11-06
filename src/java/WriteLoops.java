@@ -40,10 +40,12 @@ public class WriteLoops {
 
     public int startAtTwentyOne() {
         int w = 0;
+        for (int i =21; i >= 11; i--) {
 
-        // Write a FOR loop that makes 10 iterations, start at 21.
-        // calling
-        w = w + 1;
+            // Write a FOR loop that makes 10 iterations, start at 21.
+            // calling
+            w = w + 1;
+        }
         // each time through the loop
         
         return w;
