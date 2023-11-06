@@ -14,6 +14,7 @@ public class WriteLoops {
 
     public int oneToFive() {
         int w = 0;
+        for (int i = 0; i < 5; i++)
 
         // Write a FOR loop that counts from 1 to 10.
             // calling
