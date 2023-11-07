@@ -217,15 +217,17 @@ public class WriteLoops {
     // is false, and if so, call “sendEmergencyText(“Help!”, adminPhoneNumber)”
     // and also calls “tryServerRestart()”
     public int checkServerStatus() {
-        int w = 0;
         String adminPhoneNumber = "+1 202 456 1111";
 
+        while (serverIsRunning(true)) {
+            waitFor(5);
+        }
+        if (!serverIsRunning(false)) {
+            sendEmergencyText("Help!" , adminPhoneNumber);
+            tryServerRestart("Help", adminPhoneNumber);
+        }
 
-        // calling
-        w = w + 1;
-        // each time through the inner loop
-
-        return w;
+        return 3;
     }
 
     // Declare an “int” i. Set i to 7.
@@ -423,7 +425,7 @@ public class WriteLoops {
         summer++;
         return false;
     }
-    private void sendEmergencyText(String mesg, String phone) {
+    private void sendEmergencyText(String mesg, String adminPhoneNumber) {
     }
 
     private void tryServerRestart(String mesg, String phone) {
@@ -431,7 +433,7 @@ public class WriteLoops {
 
     int serverStatus = 5;
 
-    private boolean serverIsRunning() {
+    private boolean serverIsRunning(boolean b) {
         return (serverStatus < 20);
     }
 
